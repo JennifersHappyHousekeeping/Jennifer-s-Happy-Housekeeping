@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jennifer’s Happy Housekeeping | Cleaning Services in Vista, CA</title>
+<meta name="description" content="Dependable residential and commercial cleaning in Vista, CA: standard, deep and move-in/move-out cleaning.">
+<style>
+:root{--bg:#07201f;--bg2:#0c2e2c;--card:#103a37;--gold:#d8b25a;--gold2:#f3dc9a;--ink:#f4f1e8;--mut:#a9c2bd;--r:20px}
+*{box-sizing:border-box;margin:0;padding:0}
+::selection{background:var(--gold);color:#07201f}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,'Times New Roman',serif;background:var(--bg);color:var(--ink);line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-weight:600;line-height:1.2}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.sans,nav,.btn,footer,.tag{font-family:system-ui,-apple-system,'Segoe UI',sans-serif}
+#intro{position:fixed;inset:0;z-index:99;background:radial-gradient(circle,#0f4a45,#041413);display:grid;place-items:center;perspective:900px;transition:opacity .8s,visibility .8s}
+#intro.off{opacity:0;visibility:hidden}
+#intro div{text-align:center;animation:spin 2.2s ease-out both}
+#intro img{width:150px;margin:auto;border-radius:50%;box-shadow:0 0 60px #d8b25a66}
+#intro h2{margin-top:14px;color:var(--gold2);letter-spacing:3px;font-size:1.3rem}
+@keyframes spin{from{transform:rotateY(-540deg) scale(.2);opacity:0}to{transform:none;opacity:1}}
+header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:10px 5%;background:#07201fdd;backdrop-filter:blur(12px);border-bottom:1px solid #d8b25a33}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--gold2)}
+.brand img{width:46px;height:46px;border-radius:50%}
+nav{display:flex;gap:6px;align-items:center}
+nav a{padding:8px 13px;border-radius:30px;font-size:.92rem;color:var(--ink)}
+nav a:hover,nav a.on{background:#d8b25a22;color:var(--gold2)}
+.dd{position:relative}
+.dd .menu{display:none;position:absolute;top:100%;left:0;min-width:240px;background:var(--bg2);border:1px solid #d8b25a44;border-radius:14px;padding:8px}
+.dd:hover .menu,.dd:focus-within .menu{display:block}
+.menu a{display:block}
+#burger{display:none;background:none;border:1px solid var(--gold);color:var(--gold);font-size:1.4rem;border-radius:8px;padding:2px 10px;cursor:pointer}
+main{padding-top:74px;min-height:80vh}
+section{padding:80px 5%;max-width:1200px;margin:auto}
+.hero{min-height:92vh;display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;max-width:1300px;margin:auto;padding:40px 5%;perspective:1200px}
+.hero h1{font-size:clamp(2.2rem,5vw,4rem);margin:14px 0}
+.hero h1 span{color:var(--gold)}
+.tag{display:inline-block;color:var(--gold);letter-spacing:3px;font-size:.78rem;text-transform:uppercase}
+.hero p{color:var(--mut);max-width:520px}
+.hero-img{transform-style:preserve-3d;transition:transform .15s}
+.hero-img img{border-radius:var(--r);box-shadow:0 40px 80px #000a,0 0 0 1px #d8b25a55;aspect-ratio:4/3;object-fit:cover;width:100%}
+.btn{display:inline-block;padding:14px 28px;border-radius:40px;border:0;cursor:pointer;font-size:1rem;font-weight:600;margin:20px 10px 0 0;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#07201f;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px #d8b25a55}
+.btn.ghost{background:none;border:1.5px solid var(--gold);color:var(--gold2)}
+.title{text-align:center;margin-bottom:46px}
+.title h2{font-size:clamp(1.8rem,3.5vw,2.8rem);margin-top:8px}
+.title p{color:var(--mut);max-width:620px;margin:10px auto 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;perspective:1100px}
+.card{background:linear-gradient(160deg,var(--card),var(--bg2));border:1px solid #d8b25a33;border-radius:var(--r);overflow:hidden;transition:transform .25s,box-shadow .25s;transform-style:preserve-3d}
+.card:hover{box-shadow:0 30px 60px #0009}
+.card img{height:210px;width:100%;object-fit:cover}
+.card .b{padding:22px}
+.card p{color:var(--mut);margin:8px 0 14px;font-size:.96rem}
+.card .more{color:var(--gold);font-family:system-ui,sans-serif;font-weight:600}
+.pad{padding:28px}
+.card.pad h3{color:var(--gold2)}
+.rv{opacity:0;transform:perspective(900px) rotateX(18deg) translateY(60px);transition:opacity .9s,transform .9s}
+.rv.in{opacity:1;transform:none}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.split img{border-radius:var(--r);box-shadow:0 30px 70px #000a;aspect-ratio:4/3;object-fit:cover;width:100%}
+.split p{color:var(--mut);margin-top:14px}
+.band{background:var(--bg2);max-width:none}
+.band>.in2{max-width:1200px;margin:auto}
+details{background:var(--card);border:1px solid #d8b25a33;border-radius:14px;padding:16px 22px;margin-bottom:14px}
+summary{cursor:pointer;font-weight:600;color:var(--gold2)}
+details p{color:var(--mut);margin-top:10px}
+.stars{color:var(--gold);letter-spacing:3px}
+.chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.chip{padding:12px 22px;border:1px solid var(--gold);border-radius:40px;color:var(--gold2);font-family:system-ui,sans-serif}
+.ph{padding:56px 5% 30px;text-align:center;background:linear-gradient(180deg,#0f4a45,var(--bg))}
+.ph h1{font-size:clamp(2rem,4.5vw,3.3rem)}
+.ph p{color:var(--mut);max-width:640px;margin:12px auto 0}
+ul.ck{list-style:none;margin-top:16px}
+ul.ck li{padding:6px 0 6px 28px;position:relative;color:var(--mut)}
+ul.ck li:before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.gal{columns:3 260px;gap:20px}
+.gal img{border-radius:16px;margin-bottom:20px;transition:transform .3s}
+.gal img:hover{transform:scale(1.03) rotate(-1deg)}
+iframe{width:100%;height:380px;border:0;border-radius:var(--r)}
+footer{background:#041413;border-top:1px solid #d8b25a44;padding:60px 5% 24px}
+.fg{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:36px}
+footer h3{color:var(--gold2);margin-bottom:12px;font-size:1.05rem}
+footer p,footer a{color:var(--mut);display:block;margin:6px 0;font-size:.94rem}
+footer a:hover{color:var(--gold2)}
+.copy{text-align:center;margin-top:36px;color:var(--mut);font-size:.85rem}
+#modal{position:fixed;inset:0;z-index:100;background:#000b;display:none;place-items:center}
+#modal.show{display:grid}
+#modal div{background:var(--bg2);border:1px solid var(--gold);border-radius:var(--r);padding:36px;text-align:center;max-width:380px;animation:spin .6s both}
+#modal a.num{display:block;font-size:1.8rem;color:var(--gold2);margin:10px 0 4px;font-family:system-ui,sans-serif;font-weight:700}
+@media(max-width:860px){
+ #burger{display:block}
+ nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--bg2);padding:14px}
+ nav.open{display:flex}
+ .dd .menu{display:block;position:static;border:0;padding-left:14px}
+ .hero,.split{grid-template-columns:1fr}
+ .brand span{font-size:.9rem}
+}
+</style>
+</head>
+<body>
+<div id="intro"><div><img src="https://jenshappyhousekeeping.com/wp-content/uploads/2025/07/Jennifers-Logo-1024x1024.png" alt="Logo"><h2>JENNIFER’S HAPPY HOUSEKEEPING</h2></div></div>
+
+<header>
+ <a href="#/" class="brand"><img src="https://jenshappyhousekeeping.com/wp-content/uploads/2025/07/Jennifers-Logo-1024x1024.png" alt="Jennifer’s Happy Housekeeping logo"><span>Jennifer’s Happy Housekeeping</span></a>
+ <button id="burger" aria-label="Menu">☰</button>
+ <nav id="nav">
+  <a href="#/" data-p="home">Home</a>
+  <a href="#/about" data-p="about">About Us</a>
+  <div class="dd"><a href="#/services" data-p="services">Services ▾</a>
+   <div class="menu">
+    <a href="#/standard-cleaning">Standard Cleaning</a>
+    <a href="#/deep-cleaning">Deep Cleaning</a>
+    <a href="#/move-in-out-cleaning">Move-In / Move-Out</a>
+   </div></div>
+  <a href="#/areas" data-p="areas">Service Areas</a>
+  <a href="#/gallery" data-p="gallery">Gallery</a>
+  <a href="#/contact" data-p="contact">Contact Us</a>
+ </nav>
+</header>
+
+<main id="app"></main>
+
+<footer>
+ <div class="fg">
+  <div><h3>Jennifer’s Happy Housekeeping</h3><p>Dependable residential and commercial cleaning in Vista, CA.</p></div>
+  <div><h3>Quick Links</h3><a href="#/">Home</a><a href="#/about">About Us</a><a href="#/services">Services</a><a href="#/contact">Contact</a></div>
+  <div><h3>Contact Information</h3>
+   <p>📍 2048 Cottage Way, Vista, CA 92081</p>
+   <a href="tel:+17605052951">📞 (760) 505-2951</a>
+   <a href="mailto:jenshappyhousekeeping@gmail.com">✉️ jenshappyhousekeeping@gmail.com</a>
+   <p>🕗 Mon–Sat, 8AM–5PM</p></div>
+  <div><h3>Find Us</h3>
+   <iframe style="height:170px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1710657.0082851131!2d-118.7979449!3d34.02636345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x439e0edd6d8a53b7%3A0x492f728d82b1cccf!2sJennifer's%20Happy%20Housekeeping!5e1!3m2!1sen!2s!4v1794251434124!5m2!1sen!2s" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+ </div>
+ <p class="copy">© <span id="yr"></span> Jennifer’s Happy Housekeeping. All rights reserved.</p>
+</footer>
+
+<div id="modal"><div>
+ <h3>Call or Email Us</h3><p style="color:var(--mut)">Mon–Sat, 8AM–5PM</p>
+ <a class="num" href="tel:+17605052951">(760) 505-2951</a>
+ <a class="btn" href="mailto:jenshappyhousekeeping@gmail.com?subject=Cleaning%20Service%20Inquiry" style="word-break:break-all;font-size:.9rem">✉️ jenshappyhousekeeping@gmail.com</a>
+ <button class="btn ghost" onclick="modal.classList.remove('show')">Close</button>
+</div></div>
+
+<script>
+const IMG={
+ deep:"https://dutable.com/wp-content/uploads/2025/08/deep-cleaning-services.webp",
+ move:"https://avatars.mds.yandex.net/i?id=b399e10dad4f8d01aa60c3bb056bd916bb6925fd-5895790-images-thumbs&n=13",
+ std:"https://www.bbcleaningservice.com/wp-content/uploads/2025/03/office-cleaning-crew.jpg"
+};
+const S=[
+ {id:"standard-cleaning",t:"Standard Cleaning",img:IMG.std,d:"Regular upkeep that keeps your home or office fresh, tidy and welcoming.",
+  long:"Our standard cleaning keeps homes and workplaces consistently spotless on a weekly, bi-weekly or monthly schedule.",
+  list:["Dusting of surfaces and fixtures","Vacuuming and mopping floors","Kitchen and appliance exteriors wiped","Bathrooms scrubbed and sanitized","Trash removal and tidy-up"]},
+ {id:"deep-cleaning",t:"Deep Cleaning",img:IMG.deep,d:"A top-to-bottom, detail-focused clean that reaches the spots daily cleaning misses.",
+  long:"Deep cleaning is ideal for seasonal refreshes or spaces that haven’t had a thorough clean in a while.",
+  list:["Baseboards, vents and door frames","Inside microwave and appliance exteriors","Detailed bathroom tile and grout work","Window sills and tracks","Behind and under reachable furniture"]},
+ {id:"move-in-out-cleaning",t:"Move-In / Move-Out Cleaning",img:IMG.move,d:"Leave a place ready for the next chapter, or start yours in a spotless home.",
+  long:"Moving is stressful enough. We prepare empty homes and offices so they are ready for new residents or a deposit inspection.",
+  list:["Cabinets and drawers wiped","Closets, shelves and floors cleaned","Kitchen and bathrooms fully detailed","Walls and fixtures spot-cleaned","Final walkthrough checks"]}
+];
+const AREAS=["Vista","Oceanside","Carlsbad","San Marcos","Escondido","Encinitas","Fallbrook","Bonsall"];
+const REV=[["Maria S.","Our house has never looked better. The team was on time, friendly and thorough."],["David R.","Reliable office cleaning every week. We come in to a fresh, professional space."],["Angela T.","The move-out clean was flawless and stress-free. Highly recommended!"]];
+const FAQ=[["What areas do you serve?","We serve Vista, CA and nearby North County communities. See our Service Areas page."],["Do you clean homes and businesses?","Yes, we offer both residential and commercial cleaning."],["How do I book a cleaning?","Tap Contact Us to see our phone number, or send us an email."],["What are your working hours?","Monday to Saturday, 8AM to 5PM."]];
+const WHY=[["🏆","Experienced Team","Trained professionals who care about every detail."],["⏰","Reliable Service","Dependable scheduling you can count on."],["✨","Spotless Results","Fresh, healthy spaces every single visit."],["🤝","Tailored To You","Cleaning plans built around your needs."]];
+const CTA=`<button class="btn" onclick="modal.classList.add('show')">Contact Us</button><a class="btn ghost" href="mailto:jenshappyhousekeeping@gmail.com?subject=Cleaning%20Service%20Inquiry" style="word-break:break-all">✉️ jenshappyhousekeeping@gmail.com</a>`;
+const cards=()=>`<div class="grid">${S.map(s=>`<a href="#/${s.id}" class="card rv tilt"><img src="${s.img}" alt="${s.t}" loading="lazy"><div class="b"><h3>${s.t}</h3><p>${s.d}</p><span class="more">Learn more →</span></div></a>`).join("")}</div>`;
+const hd=(t,p)=>`<div class="ph"><span class="tag">Jennifer’s Happy Housekeeping</span><h1>${t}</h1><p>${p}</p></div>`;
+const PAGES={
+home:()=>`
+<div class="hero"><div><span class="tag">Vista, CA · Residential & Commercial</span>
+ <h1>Spotless Spaces, <span>Happy Living.</span></h1>
+ <p>Dependable standard, deep and move-in/move-out cleaning delivered with attention to detail, so you can enjoy more of your time.</p>
+ <a class="btn" href="#/services">Explore Services</a>${CTA.replace('class="btn"','class="btn ghost"').replace('btn ghost" href','btn ghost" href')}</div>
+ <div class="hero-img" id="hi"><img src="${IMG.deep}" alt="Professional deep cleaning"></div></div>
+<section><div class="title"><span class="tag">What We Do</span><h2>Our Cleaning Services</h2><p>Choose the service that fits your space.</p></div>${cards()}
+ <div style="text-align:center"><a class="btn" href="#/services">Explore Services</a></div></section>
+<section class="band"><div class="in2 split"><img class="rv" src="${IMG.std}" alt="Our cleaning team"><div class="rv"><span class="tag">About Us</span><h2>Cleaning You Can Count On</h2><p>Jennifer’s Happy Housekeeping provides dependable residential and commercial cleaning in Vista, CA. Our experienced team is committed to spotless results, fresh living and working spaces, and reliable service.</p><a class="btn ghost" href="#/about">Read Our Story</a></div></div></section>
+<section><div class="title"><span class="tag">Why Choose Us</span><h2>The Happy Housekeeping Difference</h2></div><div class="grid">${WHY.map(w=>`<div class="card pad rv tilt"><div style="font-size:2rem">${w[0]}</div><h3>${w[1]}</h3><p>${w[2]}</p></div>`).join("")}</div></section>
+<section class="band"><div class="in2"><div class="title"><span class="tag">Reviews</span><h2>What Customers Say</h2></div><div class="grid">${REV.map(r=>`<div class="card pad rv tilt"><div class="stars">★★★★★</div><p>“${r[1]}”</p><h3>${r[0]}</h3></div>`).join("")}</div>
+<p style="text-align:center;margin-top:24px"><a class="btn ghost" href="https://g.page/r/Cc_MsYKNci9JEBM/" target="_blank" rel="noopener">See Our Google Reviews</a></p></div></section>
+<section><div class="title"><span class="tag">FAQs</span><h2>Frequently Asked Questions</h2></div><div style="max-width:800px;margin:auto">${FAQ.map(f=>`<details class="rv"><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join("")}</div></section>
+<section style="text-align:center"><div class="card pad rv"><h2>Ready for a Fresh, Clean Space?</h2><p>Get in touch with our friendly team today.</p>${CTA}</div></section>`,
+about:()=>hd("About Us","Dependable cleaning with a personal touch.")+`<section class="split"><img class="rv" src="${IMG.std}" alt="Cleaning crew"><div class="rv"><h2>Our Story</h2><p>Jennifer’s Happy Housekeeping provides dependable residential and commercial cleaning services in Vista, CA. We specialize in standard cleaning, deep cleaning, and move-in/move-out cleaning tailored to your needs.</p><p>Our experienced team is committed to spotless results, fresh living and working spaces, and reliable service with attention to detail. Count on us for professional cleaning that saves you time and keeps your property looking its best.</p>${CTA}</div></section>
+<section><div class="grid">${WHY.map(w=>`<div class="card pad rv tilt"><div style="font-size:2rem">${w[0]}</div><h3>${w[1]}</h3><p>${w[2]}</p></div>`).join("")}</div></section>`,
+services:()=>hd("Our Services","Residential and commercial cleaning tailored to you.")+`<section>${cards()}</section>`,
+areas:()=>hd("Service Areas","Proudly serving Vista and nearby communities.")+`<section><div class="chips">${AREAS.map(a=>`<span class="chip rv">📍 ${a}, CA</span>`).join("")}</div><p style="text-align:center;color:var(--mut);margin-top:30px">Not sure if we cover your neighborhood? Just ask.</p><div style="text-align:center">${CTA}</div></section>`,
+gallery:()=>hd("Gallery","A glimpse of our work.")+`<section><div class="gal">${[IMG.deep,IMG.std,IMG.move].map((u,i)=>`<img src="${u}" alt="Cleaning gallery ${i+1}" loading="lazy">`).join("")}</div></section>`,
+contact:()=>hd("Contact Us","We’d love to hear from you.")+`<section class="split"><div><div class="card pad"><h3>Jennifer’s Happy Housekeeping</h3><ul class="ck"><li>2048 Cottage Way, Vista, CA 92081</li><li>Mon–Sat, 8AM–5PM</li><li><a href="mailto:jenshappyhousekeeping@gmail.com">jenshappyhousekeeping@gmail.com</a></li></ul>${CTA}</div></div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1710657.0082851131!2d-118.7979449!3d34.02636345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x439e0edd6d8a53b7%3A0x492f728d82b1cccf!2sJennifer's%20Happy%20Housekeeping!5e1!3m2!1sen!2s!4v1794251434124!5m2!1sen!2s" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></section>`
+};
+S.forEach(s=>PAGES[s.id]=()=>hd(s.t,s.d)+`<section class="split"><img class="rv" src="${s.img}" alt="${s.t}"><div class="rv"><h2>${s.t}</h2><p>${s.long}</p><ul class="ck">${s.list.map(l=>`<li>${l}</li>`).join("")}</ul>${CTA}</div></section><section><div class="title"><h2>Other Services</h2></div><div class="grid">${S.filter(x=>x!==s).map(x=>`<a href="#/${x.id}" class="card tilt"><img src="${x.img}" alt="${x.t}" loading="lazy"><div class="b"><h3>${x.t}</h3><p>${x.d}</p></div></a>`).join("")}</div></section>`);
+const app=document.getElementById("app"),modal=document.getElementById("modal");
+function bind(){
+ const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.15});
+ document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+ document.querySelectorAll(".tilt").forEach(c=>{
+  c.addEventListener("mousemove",e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`rotateY(${x*14}deg) rotateX(${-y*14}deg) translateZ(10px)`});
+  c.addEventListener("mouseleave",()=>c.style.transform="");
+ });
+}
+function route(){
+ const k=(location.hash.replace("#/","")||"home").split("?")[0]||"home";
+ const key=PAGES[k]?k:"home";
+ app.innerHTML=PAGES[key]();
+ window.scrollTo(0,0);
+ document.querySelectorAll("nav a[data-p]").forEach(a=>a.classList.toggle("on",a.dataset.p===(key==="" ? "home":key)||(S.some(s=>s.id===key)&&a.dataset.p==="services")));
+ document.getElementById("nav").classList.remove("open");
+ document.title=(key==="home"?"":PAGES[key]&&document.querySelector(".ph h1")?document.querySelector(".ph h1").textContent+" | ":"")+"Jennifer’s Happy Housekeeping | Vista, CA";
+ bind();
+}
+addEventListener("hashchange",route);
+document.getElementById("burger").onclick=()=>document.getElementById("nav").classList.toggle("open");
+document.getElementById("yr").textContent=new Date().getFullYear();
+addEventListener("scroll",()=>{const h=document.getElementById("hi");if(h){const y=Math.min(scrollY,600);h.style.transform=`rotateY(${-12+y/50}deg) rotateX(${y/60}deg) translateY(${y*.15}px)`}},{passive:true});
+modal.addEventListener("click",e=>{if(e.target===modal)modal.classList.remove("show")});
+route();
+setTimeout(()=>document.getElementById("intro").classList.add("off"),2400);
+</script>
+</body>
+</html>
